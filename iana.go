@@ -38,7 +38,7 @@ func NewIANA() *IANA {
 	}
 
 	if err := v.Refresh(); err != nil {
-		panic(err)
+		log.Print(err.Error())
 	}
 
 	return v
